@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+.block{
+  display:block !important;
+  width:100% !important;
+}
+.circle{
+  border-radius:2.5rem !important;
+}
+body{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+    font-size: 62.5%;
+}
+$warning:#FFD002;
+$white:#fff;
+$primary:#15038C;
+$secondary:#DF0045;
+$dark:#253840;
+$success:#2ecc71;
+$default:#1a1a1a;
+$light-blue:#053FFF;
+$fairuz:#01597C;
+
+
+@mixin outlined($main,$secondary){
+  border: 1px solid #{$main}3b;
+  color: $main;
+   &:hover{
+       background:$main;
+      color:$secondary;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+      }
+}
+@mixin contained($main,$secondary,$back){
+  border:none;
+  color:$secondary;
+  background:$main;
+   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  &:hover{
+    background:$back;
+  }
+}
+@mixin iconed($main,$secondary,$back,$icon){
+  border:none;
+  color:$secondary;
+  background:$main;
+  padding: 1.5rem 2rem;
+   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  &:hover{
+    background:$back;
+  }
+  margin-left:3.3rem;
+  border-radius:0 4px 4px 0;
+  &::before{
+    content: $icon;
+    font-family: 'FontAwesome';
+    background:$back;
+    position:absolute;
+    padding: 1.5rem 1rem;
+    top:0;
+    font-size:1.6rem;
+    right:100%;
+    
+     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+    border-radius:4px 0 0 4px;
+  }
+}
+@mixin circled($main,$secondary,$back){
+   border:none;
+  color:$secondary;
+  background:$main;
+   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  &:hover{
+    background:$back;
+  }
+}
+.btn{
+  margin:.8rem;
+  font-size:1.4rem;
+  min-width: 64px;
+  padding:1rem 2rem;
+  text-transform:uppercase;
+  border-radius: 4px;
+  letter-spacing: 0.05857em;
+  font-family: 'Roboto', sans-serif;
+  background:transparent;
+  position: relative;
+  border: 1px solid;
+  transition: background-color 250ms      cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor:pointer;
+  outline:none;
+  
+  &--outlined{
+    
+    &-warning{
+      @include outlined($warning,$white);
+    }
+    &-primary{
+      @include outlined($primary,$white);
+    }
+     &-secondary{
+      @include outlined($secondary,$white);
+    }
+     &-dark{
+      @include outlined($dark,$white);
+    }
+    &-success{
+      @include outlined($success,$white);
+    }
+    &-fairuz{
+     @include outlined($fairuz,$white);
+    }
+    &-light-blue{
+     @include outlined($light-blue,$white);
+    }
+     &-default{
+       border:1px solid #{$default}3b;
+       &:hover{
+         background:#{$default}14;
+       }
+    }
+    
+  }
+  &--contained{
+    &-warning{
+      @include contained($warning,$white,#b99f1c);
+    }
+    &-primary{
+      @include contained($primary,$white,#150963);
+    }
+     &-secondary{
+      @include contained($secondary,$white,#9a0036);
+    }
+     &-dark{
+      @include contained($dark,$white,#131d21);
+    }
+    &-success{
+      @include contained($success,$white,#036766);
+    }
+     &-fairuz{
+      @include contained($fairuz,$white,#053c52);
+    }
+     &-light-blue{
+      @include contained($light-blue,$white,#0633ca);
+    }
+    &-default{
+      @include contained(#e0e0e0,$default,#d5d5d5);
+      background-color: #e0e0e0;
+    }
+    &-bluer{
+      background:rgba(0,0,0,.8);
+      color:$white;
+      @supports(backdrop-filter:blur(10px)) or (-webkit-backdrop-filter:blur(10px)){
+         -webkit-backdrop-filter: blur(10px);
+           backdrop-filter: blur(10px);  
+        color:grey;
+        background:rgba(0,0,0,0.1);
+        border:1px solid transparent;
+      }
+    }
+  }
+  &--iconed{
+    &-primary{
+      @include iconed($primary,$white,#150963,"\f05a");
+    }
+      &-secondary{
+      @include iconed($secondary,$white,#9a0036,"\f07a");
+    }
+     &-dark{
+      @include iconed($dark,$white,#131d21,"\f1d8");
+    }
+    &-success{
+      @include iconed($success,$white,#036766,"\f1d8");
+    }
+  }
+  &--circled{
+    &-default{
+      @include circled($dark,$white,#131d21);
+      height:4rem;
+      padding:0 2.5rem;
+      border-radius:2rem;    
+  }
+    &-menu{
+      min-width:4rem;
+      height:4rem;
+      border-radius:100%;
+      padding:0;
+      border:none;
+      display:flex;
+    justify-content:center;
+    align-items:center;
+      color: rgba(0, 0, 0, 0.54);
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+      svg{
+        fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    //font-size: 1.25rem;
+      }
+    }
+    &-white{
+      height:4rem;
+      padding:0 2.5rem;
+      border-radius:2rem;
+      border:none;
+      background:$white;
+      &:hover{
+       transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        &::after{
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+     }
+      &::after
+ {
+     content: "";
+       display: inline-block;
+       height: 100%;
+       width: 100%;
+       border-radius: 10rem;
+       position: absolute; 
+       top: 0;
+      left: 0;    
+      z-index: -1;
+       transition: all .4s;
+     background:white;
+
+    }
+   
+    }
+  }
+}
+.group{
+  &__wrapper{
+    padding:2rem 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    background:#f0f0f0;
+    color:$dark;
+    
+    }
+}
+.heading-primary{
+  font-size:2.5rem;
+  font-weight:300;
+  font-family: "Roboto", sans-serif;
+  padding:2rem 1rem; 
+}
