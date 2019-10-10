@@ -20,15 +20,25 @@ body{
 html{
     font-size: 62.5%;
 }
-$warning:#FFD002;
+$warning:#ffdd57;
+$warning-dark:#b99f1c;
+$warning-light:#FFFDF5;
 $white:#fff;
 $primary:#15038C;
 $secondary:#DF0045;
 $dark:#253840;
-$success:#2ecc71;
+$success:#23d160;
+$success-dark:#20b955;
+$success-light:#F6FEF9;
 $default:#1a1a1a;
-$light-blue:#053FFF;
+$link:#3273dc;
+$info:#209cee;
+$info-dark:#2356a9;
+$info-light:#F6FBFE;
 $fairuz:#01597C;
+$danger:#ff3860;
+$danger-dark:#9a0036;
+$danger-light:#FFF5F7;
 
 
 @mixin outlined($main,$secondary){
@@ -102,7 +112,7 @@ $fairuz:#01597C;
   &--outlined{
     
     &-warning{
-      @include outlined($warning,$white);
+      @include outlined($warning,rgba(0,0,0,.7));
     }
     &-primary{
       @include outlined($primary,$white);
@@ -119,9 +129,16 @@ $fairuz:#01597C;
     &-fairuz{
      @include outlined($fairuz,$white);
     }
-    &-light-blue{
-     @include outlined($light-blue,$white);
+    &-info{
+     @include outlined($info,$white);
     }
+      &-link{
+     @include outlined($link,$white);
+    }
+     &-danger{
+     @include outlined($danger,$white);
+    }
+    
      &-default{
        border:1px solid #{$default}3b;
        &:hover{
@@ -132,7 +149,7 @@ $fairuz:#01597C;
   }
   &--contained{
     &-warning{
-      @include contained($warning,$white,#b99f1c);
+      @include contained($warning,rgba(0,0,0,.7),#b99f1c);
     }
     &-primary{
       @include contained($primary,$white,#150963);
@@ -140,22 +157,30 @@ $fairuz:#01597C;
      &-secondary{
       @include contained($secondary,$white,#9a0036);
     }
+     &-danger{
+      @include contained($danger,$white,#9a0036);
+    }
      &-dark{
       @include contained($dark,$white,#131d21);
     }
     &-success{
-      @include contained($success,$white,#036766);
+      @include contained($success,$white,#20b955);
     }
      &-fairuz{
       @include contained($fairuz,$white,#053c52);
     }
-     &-light-blue{
-      @include contained($light-blue,$white,#0633ca);
+     &-info{
+      @include contained($info,$white,#13679e);
     }
+     &-link{
+      @include contained($link,$white,#2356a9);
+    }
+     
     &-default{
       @include contained(#e0e0e0,$default,#d5d5d5);
       background-color: #e0e0e0;
     }
+  
     &-bluer{
       background:rgba(0,0,0,.8);
       color:$white;
@@ -170,7 +195,7 @@ $fairuz:#01597C;
   }
   &--iconed{
     &-primary{
-      @include iconed($primary,$white,#150963,"\f05a");
+      @include iconed($link,$white,#2356a9,"\f05a");
     }
       &-secondary{
       @include iconed($secondary,$white,#9a0036,"\f07a");
@@ -179,7 +204,7 @@ $fairuz:#01597C;
       @include iconed($dark,$white,#131d21,"\f1d8");
     }
     &-success{
-      @include iconed($success,$white,#036766,"\f1d8");
+      @include iconed($success,$white,#20b955,"\f1d8");
     }
   }
   &--circled{

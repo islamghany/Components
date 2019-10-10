@@ -49,13 +49,13 @@ html {
 }
 
 .btn--outlined-warning {
-  border: 1px solid #FFD0023b;
-  color: #FFD002;
+  border: 1px solid #ffdd573b;
+  color: #ffdd57;
 }
 
 .btn--outlined-warning:hover {
-  background: #FFD002;
-  color: #fff;
+  background: #ffdd57;
+  color: rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
@@ -97,12 +97,12 @@ html {
 }
 
 .btn--outlined-success {
-  border: 1px solid #2ecc713b;
-  color: #2ecc71;
+  border: 1px solid #23d1603b;
+  color: #23d160;
 }
 
 .btn--outlined-success:hover {
-  background: #2ecc71;
+  background: #23d160;
   color: #fff;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
@@ -120,13 +120,37 @@ html {
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
 
-.btn--outlined-light-blue {
-  border: 1px solid #053FFF3b;
-  color: #053FFF;
+.btn--outlined-info {
+  border: 1px solid #209cee3b;
+  color: #209cee;
 }
 
-.btn--outlined-light-blue:hover {
-  background: #053FFF;
+.btn--outlined-info:hover {
+  background: #209cee;
+  color: #fff;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.btn--outlined-link {
+  border: 1px solid #3273dc3b;
+  color: #3273dc;
+}
+
+.btn--outlined-link:hover {
+  background: #3273dc;
+  color: #fff;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.btn--outlined-danger {
+  border: 1px solid #ff38603b;
+  color: #ff3860;
+}
+
+.btn--outlined-danger:hover {
+  background: #ff3860;
   color: #fff;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
@@ -142,8 +166,8 @@ html {
 
 .btn--contained-warning {
   border: none;
-  color: #fff;
-  background: #FFD002;
+  color: rgba(0, 0, 0, 0.7);
+  background: #ffdd57;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
@@ -176,6 +200,18 @@ html {
   background: #9a0036;
 }
 
+.btn--contained-danger {
+  border: none;
+  color: #fff;
+  background: #ff3860;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.btn--contained-danger:hover {
+  background: #9a0036;
+}
+
 .btn--contained-dark {
   border: none;
   color: #fff;
@@ -191,13 +227,13 @@ html {
 .btn--contained-success {
   border: none;
   color: #fff;
-  background: #2ecc71;
+  background: #23d160;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
 
 .btn--contained-success:hover {
-  background: #036766;
+  background: #20b955;
 }
 
 .btn--contained-fairuz {
@@ -212,16 +248,28 @@ html {
   background: #053c52;
 }
 
-.btn--contained-light-blue {
+.btn--contained-info {
   border: none;
   color: #fff;
-  background: #053FFF;
+  background: #209cee;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
 
-.btn--contained-light-blue:hover {
-  background: #0633ca;
+.btn--contained-info:hover {
+  background: #13679e;
+}
+
+.btn--contained-link {
+  border: none;
+  color: #fff;
+  background: #3273dc;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.btn--contained-link:hover {
+  background: #2356a9;
 }
 
 .btn--contained-default {
@@ -255,7 +303,7 @@ html {
 .btn--iconed-primary {
   border: none;
   color: #fff;
-  background: #15038C;
+  background: #3273dc;
   padding: 1.5rem 2rem;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
@@ -264,13 +312,13 @@ html {
 }
 
 .btn--iconed-primary:hover {
-  background: #150963;
+  background: #2356a9;
 }
 
 .btn--iconed-primary::before {
   content: "";
   font-family: 'FontAwesome';
-  background: #150963;
+  background: #2356a9;
   position: absolute;
   padding: 1.5rem 1rem;
   top: 0;
@@ -342,7 +390,7 @@ html {
 .btn--iconed-success {
   border: none;
   color: #fff;
-  background: #2ecc71;
+  background: #23d160;
   padding: 1.5rem 2rem;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
@@ -351,13 +399,13 @@ html {
 }
 
 .btn--iconed-success:hover {
-  background: #036766;
+  background: #20b955;
 }
 
 .btn--iconed-success::before {
   content: "";
   font-family: 'FontAwesome';
-  background: #036766;
+  background: #20b955;
   position: absolute;
   padding: 1.5rem 1rem;
   top: 0;
