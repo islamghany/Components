@@ -1,2 +1,2 @@
-  ![buttons](/buttons/buttons.png,"chatting") 
+  ![buttons-here](/buttons.png "chatting") 
   
