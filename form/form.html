@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+    <title>form</title>
+</head>
+<body>
+<h1> #default form</h1>
+<div class="form">
+<div class="form__container">
+  <form>
+     <div class="form__unit">
+       <label for="email" class="form__label">Email Address</label>
+       <input class="form__input" id="email" autocomplete="off" type="text" placeholder="Enter Your E-mail." />
+    </div>
+     <div class="form__unit">
+       <label for="password" class="form__label">Password</label>
+       <input class="form__input" id="password" autocomplete="off" type="text" placeholder="Enter Your E-mail." />
+    </div>
+    <button class="btn btn--contained-primary" >Submit</button>
+  </form>
+  </div>
+</div>
+
+<h1>#Downshift inputs</h1>
+<div class="form">
+  <div class="form__container">
+ <div class="form__unit">
+       <label for="email" class="form__label downshift ">Email</label>
+       <input class="form__input downshift" id="email" autocomplete="off" type="text" placeholder="Enter Your E-mail." />
+    </div>
+    <div class="form__unit labelup">
+     
+       <input class="form__input downshift  labelup" id="emailup" autocomplete="off" type="text" placeholder="Email" />
+        <label for="emailup" class="form__label downshift labelup">Email</label>
+      
+    </div>
+    <div class="form__unit">
+      
+       <input class="form__input downshift labelup contained " id="emailup" autocomplete="off" type="text" placeholder="Email" />
+       <label for="emailup" class="form__label downshift labelup">Email</label>
+    </div>
+    </div>
+</div>
+<h1>#inputs</h1>
+<div class="form">
+  <div class="form__container">
+    <div class="form__unit labeled">
+       <input class="form__input labeled" id="password" autocomplete="off" type="text" placeholder="input labeled" />
+      <button class="btn btn--contained-default"> 
+      search</button>
+    </div>
+    <div class="form__unit">
+       <input class="form__input iconed success" autocomplete="off" type="text" placeholder="Email" />
+      <span class="form__icon">
+        <svg aria-hidden="true" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+      </span>
+    </div>
+        <div class="form__unit">
+       <input class="form__input iconed error" autocomplete="off" type="text" placeholder="Email" />
+      <span class="form__icon">
+  <svg class="svg-inline--fa fa-lock fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="lock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path><svg class="svg-inline--fa fa-lock fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="lock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg></svg>
+      </span>
+    </div>
+  </div>
+ </div>
+ <h1>#textarea</h1>
+<div class="form">
+  <div class="form__container">
+    <div class="form__unit">
+      <label class="form__label">text</label><br>
+      <textarea class="form__textarea"></textarea>
+    </div>
+  </div>
+</div>
+<h1>#radio</h1>
+<div class="form">
+  <div class="form__container">
+    <div class="form__row">
+    <div class="form__unit check">
+      <input class="form__radio hidden" type="radio" id="yes" name="rad">
+      <label for="yes" class="form__label-radio">Yes</label>
+      </div>
+      <div class="form__unit check">
+       <input class="form__radio hidden" type="radio" id="no" name="rad">
+       <label for="no" class="form__label-radio">No</label>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<h1>#checkbox</h1>
+<div class="form">
+  <div class="form__container">
+    <div class="form__unit check">
+      <input class="form__checkbox hidden" type="checkbox" id="rem" name="rem">
+      <label for="rem" class="form__label-box"> Remember me</label>
+    </div>
+  </div>
+</div>
+<h1>#select</h1>
+<div class="form">
+  <div class="form__container">
+    <div class="form__unit select">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+</body>
+</html>
