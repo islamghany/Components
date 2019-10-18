@@ -48,6 +48,11 @@ html {
   outline: none;
 }
 
+.btn:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
 .btn--outlined-warning {
   border: 1px solid #ffdd573b;
   color: #ffdd57;
@@ -317,7 +322,7 @@ html {
 
 .btn--iconed-primary::before {
   content: "";
-  font-family: 'FontAwesome';
+  font-family: FontAwesome;
   background: #2356a9;
   position: absolute;
   padding: 1.5rem 1rem;
@@ -346,7 +351,7 @@ html {
 
 .btn--iconed-secondary::before {
   content: "";
-  font-family: 'FontAwesome';
+  font-family: FontAwesome;
   background: #9a0036;
   position: absolute;
   padding: 1.5rem 1rem;
@@ -375,7 +380,7 @@ html {
 
 .btn--iconed-dark::before {
   content: "";
-  font-family: 'FontAwesome';
+  font-family: FontAwesome;
   background: #131d21;
   position: absolute;
   padding: 1.5rem 1rem;
@@ -404,7 +409,7 @@ html {
 
 .btn--iconed-success::before {
   content: "";
-  font-family: 'FontAwesome';
+  font-family: FontAwesome;
   background: #20b955;
   position: absolute;
   padding: 1.5rem 1rem;
@@ -526,5 +531,45 @@ html {
   font-weight: 300;
   font-family: "Roboto", sans-serif;
   padding: 2rem 1rem;
+}
+
+[ripple] {
+  position: relative;
+  overflow: hidden;
+}
+
+[ripple] .ripple--container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+[ripple] .ripple--container span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.75;
+  background-color: #fff;
+  -webkit-animation: ripple 1000ms;
+          animation: ripple 1000ms;
+}
+
+@-webkit-keyframes ripple {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
 }
 /*# sourceMappingURL=buttons.css.map */
